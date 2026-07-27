@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="190" viewBox="0 0 1600 190" role="img" aria-label="Profile footer">
+    
+    <defs>
+      <linearGradient id="shade" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".48"/>
+        <stop offset=".5" stop-color="#000" stop-opacity=".68"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+      </linearGradient>
+      <linearGradient id="scan" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#fff" stop-opacity=".72"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="halo">
+        <stop offset="0" stop-color="#fff" stop-opacity=".17"/>
+        <stop offset=".58" stop-color="#fff" stop-opacity=".035"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="4" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      
+    </defs>
+    <style>
+      .title{font:700 30px Arial,Helvetica,sans-serif;letter-spacing:2px;fill:#fff}
+      .label{font:600 16px Arial,Helvetica,sans-serif;letter-spacing:1.1px;fill:#fff}
+      .meta{font:500 12px Arial,Helvetica,sans-serif;letter-spacing:1.4px;fill:#aaa}
+      .fine{stroke:#fff;stroke-opacity:.18;fill:none}
+      .card{fill:#050505;fill-opacity:.84;stroke:#fff;stroke-opacity:.24}
+      .scan{animation:scan 5s ease-in-out infinite}
+      @keyframes scan{0%,14%{transform:translateX(-340px);opacity:0}35%{opacity:.5}62%,100%{transform:translateX(1700px);opacity:0}}
+      @keyframes breathe{0%,100%{opacity:.12}50%{opacity:.34}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes reveal{0%,8%{opacity:0;transform:translateY(14px)}18%,86%{opacity:1;transform:translateY(0)}96%,100%{opacity:0}}
+      @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+    </style>
+    <rect width="1600" height="190" fill="#000"/>
+    <path d="M120 72H650L800 126 950 72h530" fill="none" stroke="#fff" stroke-opacity=".24"/>
+    <circle cx="800" cy="126" r="5" fill="#fff" filter="url(#glow)">
+      <animate attributeName="opacity" values=".25;1;.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="800" y="168" text-anchor="middle" class="meta">xD</text>
+    <rect x=".5" y=".5" width="1599" height="189" fill="none" stroke="#fff" stroke-opacity=".13"/>
+  </svg>
